@@ -25,6 +25,10 @@ AddCityFragment.AddCityDialogListener{
     }
 
     @Override
+    public void editCity(City city){
+        cityAdapter.notifyDataSetChanged();
+    }
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
@@ -43,6 +47,12 @@ AddCityFragment.AddCityDialogListener{
         cityList = findViewById(R.id.city_list);
         cityAdapter = new CityArrayAdapter(this, dataList);
         cityList.setAdapter(cityAdapter);
+
+        cityList.setOnItemClickListener((parent, view, position, id)->{
+            City selectedCity = dataList.get(position);
+            AddCityFragment fragment = AddCityFragment.newInstance(selectedCity);
+            fragment.show(getSupportFragmentManager(), "Edit City");
+        });
 
         FloatingActionButton fab = findViewById(R.id.button_add_city);
         fab.setOnClickListener(v->{
