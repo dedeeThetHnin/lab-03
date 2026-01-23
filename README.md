@@ -5,6 +5,7 @@
 List any resources used here, or simply put `N/A` if not applicable.
 - Lab-3 descriptions
 - the help from TA in lab section
+- Lab-3 instructions walkthrough
 
 ## Verbal Collaboration
 
