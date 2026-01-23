@@ -2,17 +2,17 @@ package com.example.listycitylab3;
 
 public class City {
     private String name;
-    private String provnince;
-    public City(String name, String provnince){
+    private String province;
+    public City(String name, String province){
         this.name = name;
-        this.province = provnince;
+        this.province = province;
     }
 
     public String getName(){
         return name;
     }
 
-    public String getProvnince(){
+    public String getProvince(){
         return province;
     }
 }
